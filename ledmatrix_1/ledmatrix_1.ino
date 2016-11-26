@@ -35,7 +35,7 @@ void loop() {
   delay(delaytime);
   lc.clearDisplay(0);
   */
-  for (int i = 0; i<8; i++){ 
+  /*for (int i = 0; i<8; i++){ 
   lc.setColumn(0,i,heart[i]);
   }
   delay(1000);
@@ -72,43 +72,98 @@ void loop() {
   lc.setColumn(0,i,pacman2[7-i]);
   }
   delay(300);
-  }
+  }*/
   lc.clearDisplay(0);
   lc.setRow(0,7,0x82);
-  delay(500);
+  delay(delaytime);
   lc.setRow(0,6,0x82);
   lc.setRow(0,7,0xfe);
-  delay(500);
+  delay(delaytime);
   lc.setRow(0,5,0x82);
   lc.setRow(0,6,0xfe);
   lc.setRow(0,7,0xfe);
-  delay(500);
+  delay(delaytime);
   lc.setRow(0,4,0x82);
   lc.setRow(0,5,0xfe);
   lc.setRow(0,6,0xfe);
   lc.setRow(0,7,0x82);
-  delay(500);
+  delay(delaytime);
   lc.setRow(0,3,0x82);
   lc.setRow(0,4,0xfe);
   lc.setRow(0,5,0xfe);
   lc.setRow(0,6,0x82);
-  lc.setRow(0,7,0xc0);
-  delay(500);
+  lc.setRow(0,7,0x80);
+  delay(delaytime);
   lc.setRow(0,2,0x82);
   lc.setRow(0,3,0xfe);
   lc.setRow(0,4,0xfe);
   lc.setRow(0,5,0x82);
-  lc.setRow(0,6,0xc0);
-  lc.setRow(0,7,0xe0);
-  delay(500);
+  lc.setRow(0,6,0x80);
+  lc.setRow(0,7,0xc0);
+  delay(delaytime);
   lc.setRow(0,1,0x82);
   lc.setRow(0,2,0xfe);
   lc.setRow(0,3,0xfe);
   lc.setRow(0,4,0x82);
+  lc.setRow(0,5,0x80);
+  lc.setRow(0,6,0xc0);
+  lc.setRow(0,7,0xe0);
+  delay(delaytime);
+  lc.setRow(0,0,0x82); //L
+  lc.setRow(0,1,0xfe);
+  lc.setRow(0,2,0xfe);
+  lc.setRow(0,3,0x82);
+  lc.setRow(0,4,0x80);
   lc.setRow(0,5,0xc0);
   lc.setRow(0,6,0xe0);
-  lc.setRow(0,7,0x00);
-  delay(500);
+  lc.setRow(0,7,0x00); 
+  delay(5000);
+  lc.setRow(0,0,0x70); //o
+  lc.setRow(0,1,0xf8);
+  lc.setRow(0,2,0x88);
+  lc.setRow(0,3,0x88);
+  lc.setRow(0,4,0x88);
+  lc.setRow(0,5,0xF8);
+  lc.setRow(0,6,0x70);
+  lc.setRow(0,7,0x00); 
+  delay(5000);
+  lc.setRow(0,0,0x8); //t
+  lc.setRow(0,1,0x8);
+  lc.setRow(0,2,0x7e);
+  lc.setRow(0,3,0xfe);
+  lc.setRow(0,4,0x88);
+  lc.setRow(0,5,0xc8);
+  lc.setRow(0,6,0x40);
+  lc.setRow(0,7,0x00); 
+  delay(5000);
+  lc.setRow(0,0,0x70); //e
+  lc.setRow(0,1,0xf8);
+  lc.setRow(0,2,0xa8);
+  lc.setRow(0,3,0xa8);
+  lc.setRow(0,4,0xa8);
+  lc.setRow(0,5,0xb8);
+  lc.setRow(0,6,0x30);
+  lc.setRow(0,7,0x00); 
+  delay(5000);
+  lc.clearDisplay(0);
+  for (int i =7; i <= 0; i--){
+  lc.setRow(0,i,0x70); //e
+  delay(200);
+  lc.setRow(0,i,0xf8);
+  delay(200);
+  lc.setRow(0,i,0xa8);
+  delay(200);
+  lc.setRow(0,i,0xa8);
+  delay(200);
+  lc.setRow(0,i,0xa8);
+  delay(200);
+  lc.setRow(0,i,0xb8);
+  delay(200);
+  lc.setRow(0,i,0x30);
+  delay(200);
+  lc.setRow(0,i,0x00);   
+  delay(200);
+  }
   
   //delay(delaytime);
   //lc.clearDisplay(0);
