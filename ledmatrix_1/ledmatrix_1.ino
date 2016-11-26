@@ -146,23 +146,23 @@ void loop() {
   lc.setRow(0,7,0x00); 
   delay(5000);
   lc.clearDisplay(0);
-  for (int i =7; i <= 0; i--){
+  for (int i =0; i < 8; i++){
   lc.setRow(0,i,0x70); //e
-  delay(200);
-  lc.setRow(0,i,0xf8);
-  delay(200);
-  lc.setRow(0,i,0xa8);
-  delay(200);
-  lc.setRow(0,i,0xa8);
-  delay(200);
-  lc.setRow(0,i,0xa8);
-  delay(200);
-  lc.setRow(0,i,0xb8);
-  delay(200);
-  lc.setRow(0,i,0x30);
-  delay(200);
-  lc.setRow(0,i,0x00);   
-  delay(200);
+  delay(1000);
+  lc.setRow(0,i+1,0xf8);
+  delay(1000);
+  lc.setRow(0,i+2,0xa8);
+  delay(1000);
+  lc.setRow(0,i+3,0xa8);
+  delay(1000);
+  lc.setRow(0,i+4,0xa8);
+  delay(1000);
+  lc.setRow(0,i+5,0xb8);
+  delay(1000);
+  lc.setRow(0,i+6,0x30);
+  delay(1000);
+  lc.setRow(0,i+7,0x00);   
+  delay(1000);
   }
   
   //delay(delaytime);
