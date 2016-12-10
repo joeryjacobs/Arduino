@@ -14,7 +14,7 @@ byte t[8]={0x30,0x30,0xfc,0x30,0x30,0x36,0x1c,0x00};
 byte e[8]={0x00,0x00,0x7c,0xc6,0xfe,0xc0,0x7c,0x00};
 byte pacman1[8]={0x3c,0x7e,0xdf,0xff,0xf0,0xff,0x7e,0x3c};
 byte pacman2[8]={0x3c,0x7e,0xdc,0xf8,0xf8,0xfc,0x7e,0x3c};
-
+byte enew[8]={0x70, 0xF8, 0xA8, 0xA8, 0xA8, 0xB8, 0x30, 0x0};
 void setup() {
   // put your setup code here, to run once:
   lc.shutdown(0,false);
@@ -146,26 +146,29 @@ void loop() {
   lc.setRow(0,7,0x00); 
   delay(5000);
   lc.clearDisplay(0);
-  for (int i =0; i < 8; i++){
-  lc.setRow(0,i,0x70); //e
-  delay(1000);
-  lc.setRow(0,i+1,0xf8);
-  delay(1000);
+  lc.setRow(0,7,enew[0]);
+  delay(2000);
+  for (int i =0; i <=8; i++){
+    for (int j=7; j >=0; j--){
+  lc.setRow(0,j,enew[i]); //e
+  delay(delaytime);
+ /* lc.setRow(0,i+1,0xf8);
+  delay(delaytime);
   lc.setRow(0,i+2,0xa8);
-  delay(1000);
+  delay(delaytime);
   lc.setRow(0,i+3,0xa8);
-  delay(1000);
+  delay(delaytime);
   lc.setRow(0,i+4,0xa8);
-  delay(1000);
+  delay(delaytime);
   lc.setRow(0,i+5,0xb8);
-  delay(1000);
+  delay(delaytime);
   lc.setRow(0,i+6,0x30);
-  delay(1000);
+  delay(delaytime);
   lc.setRow(0,i+7,0x00);   
-  delay(1000);
+  delay(5000);*/
   }
-  
-  //delay(delaytime);
+  }
+  delay(5000);
   //lc.clearDisplay(0);
 }
 
