@@ -148,6 +148,9 @@ void loop() {
   lc.clearDisplay(0);
   lc.setRow(0,7,enew[0]);
   delay(2000);
+  lc.setRow(0,6,enew[0]);
+  lc.setRow(0,7,enew[1]);
+  delay(2000);
   for (int i =0; i <=8; i++){
     for (int j=7; j >=0; j--){
   lc.setRow(0,j,enew[i]); //e
